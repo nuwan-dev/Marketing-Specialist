@@ -1,0 +1,648 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* ---- Developed by nuOne. ---- */
+
+/* VARIABLES */
+:root {
+    /* fonts */
+    --inter: 'Inter', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --lilita: 'Lilita One', cursive;
+    --comforta: 'Comfortaa', cursive;
+
+    /* colors */
+    --purple: #540d6e;
+    --red: #EA3223;
+    --black: #000000;
+    --blue: #1E0E62;
+    --white: #ffffff;
+    --grey: rgba(21, 20, 57, 0.4);
+
+    /* box shadow */
+    --shadow-grey: 0px 5px 10px 0px rgba(82, 82, 82, 0.25);
+
+    /* overlay */
+    --overlay-blue: rgba(29, 14, 98, 0.555);
+    --overlay-white: rgba(225, 225, 225, 0.555);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--inter);
+    font-size: 16px;
+    /* overflow: hidden; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.h2 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.h4 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.site-header {
+    width: 100%;
+    z-index: 999;
+}
+
+/* TOP BAR */
+.top-bar-container {
+    background-color: var(--purple);
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.top-bar {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0 5%;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.top-bar a {
+    text-decoration: underline;
+    color: #fff !important;
+}
+
+.top-bar p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.booking-link i {
+    display: inline !important;
+}
+
+/* TOP NAV */
+.top-nav-container {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 999 !important;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease-in-out;
+}
+
+.top-nav-scroll {
+    background-color: var(--overlay-blue);
+}
+
+.nav-top-margin {
+    transition: 0.3s ease-in-out;
+    top: 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    padding: 10px 5%;
+    text-decoration: none !important;
+    align-items: center;
+    margin: auto;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.top-nav-logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px !important;
+}
+
+.logo-light {
+    font-weight: normal;
+    font-size: 18px !important;
+}
+
+.top-nav-logo:hover {
+    color: #fff;
+}
+
+.top-nav a:not(:last-child) {
+    margin-right: 25px;
+}
+
+.top-nav-links {
+    z-index: 999;
+}
+
+.top-nav-link {
+    padding-bottom: 5px;
+    transition: 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.top-nav-link:hover {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.toggle-btn {
+    background-image: url(/assets/imgs/bars-staggered-white.png);
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-btn-close {
+    background-image: url(/assets/imgs/cross-circle.png);
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.top-nav-btn {
+    padding: 10px 25px;
+    background-color: var(--purple);
+    color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    color: #fff !important;
+}
+
+.top-nav-btn:hover {
+    transform: translateY(-3px);
+}
+
+.top-nav-mobile-active {
+    display: block !important;
+    position: fixed;
+    left: 0 !important;
+}
+
+/* HERO */
+.hero-container {
+    width: 100%;
+    background-image: url(/assets/imgs/asian-woman-holding-laptop-computer.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hero-wrapper {
+    background-color: var(--overlay-blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hero {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: 150px 5%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+}
+
+.hero h1 {
+    /* font-family: var(--lilita); */
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.hero-btn {
+    padding: 15px 25px;
+    background-color: var(--purple);
+    color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    color: #fff !important;
+    /* width: 200px; */
+    margin: auto;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.hero-btn i {
+    position: relative;
+    top: 3px;
+    left: 5%;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* MESSAGE */
+.message-container {
+    width: 100%;
+    height: auto;
+    background-color: var(--purple);
+}
+
+.message-wrapper {
+    position: relative;
+    top: 20%;
+    bottom: 0;
+    padding-bottom: 0;
+}
+
+.message {
+    padding: 0 5%;
+    /* padding-top: 150px; */
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+}
+
+.message-txt {
+    flex-basis: 50%;
+}
+
+.message-img {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.message h2 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.message p {
+    color: #fff;
+}
+
+.sp-txt {
+    color: var(--purple);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    line-height: 5rem;
+}
+
+.message-img img {
+    width: 500px;
+    height: auto;
+}
+
+/* WORK */
+.work-container {
+    width: 100%;
+    background-image: url(/assets/imgs/asian-woman-holding-laptop-computer.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+.work-wrapper {
+    background-color: var(--overlay-blue);
+    height: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.work-wrapper h2 {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.work {
+    padding: 100px 5%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    max-width: 1400px;
+}
+
+.work-1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 15px;
+    padding-bottom: 25px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.work-1:hover {
+    transform: scale(1.1);
+}
+
+.work-1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* SERVIES */
+.servies-container {
+    width: 100%;
+    background-color: var(--purple);
+}
+
+.servies-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    padding: 100px 5%;
+}
+
+.servies {
+    display: flex;
+    padding: 100px 5%;
+    margin: auto;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.servies-1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    /* padding-bottom: 25px; */
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.servies-1 h3 {
+    margin-bottom: 25px;
+}
+
+.price-btn {
+    position: relative;
+    bottom: 0;
+}
+
+.servies-1 img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* TESTIMONIAL */
+.testimony-container {
+    width: 100%;
+    background-image: url(/assets/imgs/asian-woman-holding-laptop-computer.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
+    /* padding-bottom: 100px; */
+}
+
+.testimony-wrapper {
+    background-color: var(--overlay-blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    padding-bottom: 150px;
+    margin: auto;
+}
+
+.testimonial {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    padding: 0px 5%;
+    margin: auto;
+}
+
+.single-testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+    height: 30em;
+}
+
+.single-testimonial:hover {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.testimonial-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+}
+
+.testimonial p {
+    text-align: left;
+    color: #fff;
+    margin-top: 28px;
+    font-size: 15px;
+}
+
+.testimonial-section img {
+    height: auto;
+    width: 95px;
+    max-width: 100%;
+    /* margin-right: 28px; */
+    border-radius: 10px;
+}
+
+.testimony-wrapper h2 {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center !important;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.testimonial-section h4 {
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* CONTACT */
+.contact {
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.contact img {
+    width: 500px;
+    height: auto;
+}
+
+.contact-details h2 {
+    color: var(--purple);
+    text-transform: capitalize;
+}
+
+.contact-sub {
+    margin-top: 20px;
+}
+
+/* SOCIAL */
+.social a {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer-container {
+    background-image: linear-gradient(130deg, #252525, #000);
+}
+
+.footer,
+.social {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px 5%;
+    justify-content: center;
+    margin: auto;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:not(:last-child),
+.social a:not(:last-child) {
+    margin-right: 25px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.nuone {
+    /* font-family: var(--nuone); */
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.backto-top {
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 25px;
+    bottom: 27%;
+    z-index: 99;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+
+.backto-top-active {
+    display: block;
+}
+
+.servies-wrapper {
+    margin: auto;
+}
+
+.servies-wrapper h2 {
+    color: #fff;
+    text-align: center;
+    /* padding-bottom: 50px; */
+}
+
+li {
+    list-style: decimal;
+    text-align: left;
+    line-height: 25px;
+}
+
+tr {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 15px;
+    
+}
